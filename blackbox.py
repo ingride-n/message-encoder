@@ -5,7 +5,7 @@ import random
 
 # Create key based on randomized positions
 
-def get_key(msg):
+def create_key(msg):
 	K=[i for i in range(50)]
 	random.shuffle(K)
 	key=''
@@ -16,7 +16,7 @@ def get_key(msg):
 
 # Encode a message
 
-def scramble(msg, key):
+def encode(msg, key):
 	X = []
 	result = ''
 	msg = msg.upper().replace(' ','')
@@ -33,7 +33,7 @@ def scramble(msg, key):
 
 # Decode a message
 
-def unscramble(msg, key):
+def decode(msg, key):
 	K= key.split('.')
 	K.pop(0)
 	result=''
