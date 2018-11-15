@@ -25,7 +25,7 @@ def scramble(msg, key):
 	for i in range(50):
 		X.append('#')
 	for i in range(len(msg)):
-		X[K[i]]=msg[i]
+		X[int(K[i])]=msg[i]
 	for i in range(50):
 		result += X[i]
 
@@ -40,3 +40,4 @@ def unscramble(msg, key):
 	for i in range(len(K)):
 		result += msg[int(K[i])]
 	return result
+
