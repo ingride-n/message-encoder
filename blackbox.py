@@ -17,7 +17,7 @@ def create_key(msg):
 # Encode a message
 
 def encode(msg, key):
-	X = []
+	X = []  # Array for chars of the encoded message
 	result = ''
 	msg = msg.upper().replace(' ','')
 	K= key.split('.')
@@ -25,10 +25,9 @@ def encode(msg, key):
 	for i in range(50):
 		X.append('#')
 	for i in range(len(msg)):
-		X[int(K[i])]=msg[i]
+		X[int(K[i])]=msg[i]  # Encode to a new position
 	for i in range(50):
-		result += X[i]
-
+		result += X[i] # Create string
 	return result
 
 # Decode a message
