@@ -9,7 +9,7 @@ web_hook_url = '[enter url here]'
 
 today = date.today()
 
-# Get number of days until winter break
+# Get number of days in countdown
 
 holiday = date(today.year, 12, 18)
 time_to_holiday = abs(holiday - today)
