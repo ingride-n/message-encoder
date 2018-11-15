@@ -21,9 +21,8 @@ input_msg = "We are "+str(delta_t)+" days away from winter break"
 
 # Send input message to blackbox to encode
 
-K = blackbox.positions()
-key = blackbox.key_gen(K, input_msg)
-msg_x = blackbox.scramble(K, input_msg)
+key = blackbox.generate_key(input_msg)
+msg_x = blackbox.scramble(input_msg, key)
 
 # Save blackbox output to a file
 
