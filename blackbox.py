@@ -20,16 +20,12 @@ def scramble(msg, key):
 	X = []
 	result = ''
 	msg = msg.upper().replace(' ','')
-	
 	K= key.split('.')
 	K.pop(0)
-
 	for i in range(50):
 		X.append('#')
-
 	for i in range(len(msg)):
 		X[K[i]]=msg[i]
-
 	for i in range(50):
 		result += X[i]
 
