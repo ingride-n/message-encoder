@@ -1,3 +1,3 @@
 # message-scrambler
 
-Encodes a Slack bot message
+Encodes and decodes a Slack bot message
