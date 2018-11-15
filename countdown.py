@@ -24,7 +24,7 @@ input_msg = "We are "+str(delta_t)+" days away from winter break"
 key = blackbox.create_key(input_msg)
 msg_x = blackbox.encode(input_msg, key)
 
-# Save information to a file
+# Save message information to a file
 
 with open('bot-messages.txt','a') as file:
 	file.write(msg_x+"\t")
