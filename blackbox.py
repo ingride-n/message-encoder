@@ -3,7 +3,7 @@ import sys
 import random
 
 
-# Create key based on randomized positions
+# Create key based on randomized positions (max 50 characters)
 
 def create_key(msg):
 	K=[i for i in range(50)]
