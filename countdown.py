@@ -21,10 +21,8 @@ input_msg = "We are "+str(delta_t)+" days away from winter break"
 
 # Send input message to blackbox to encode
 
-key = blackbox.generate_key(input_msg)
-msg_x = blackbox.scramble(input_msg, key)
-
-# Save blackbox output to a file
+key = blackbox.create_key(input_msg)
+msg_x = blackbox.encode(input_msg, key)
 
 with open('bot-messages.txt','a') as file:
 	file.write(msg_x+"\t")
@@ -32,7 +30,6 @@ with open('bot-messages.txt','a') as file:
 	file.write(str(datetime.now())+"\t")
 	file.close() 
 
-# Post message to Slack
-
 final_msg = {'text':msg_x}
+
 requests.post(web_hook_url,data=json.dumps(final_msg))
